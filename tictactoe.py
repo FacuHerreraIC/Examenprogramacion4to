@@ -161,8 +161,16 @@ class ComputerPlayer(TicTacToe):
         return square
 
 # starting the game
-tic_tac_toe = TicTacToe()
-tic_tac_toe.start()
+while True:
+    tic_tac_toe = TicTacToe()
+    tic_tac_toe.start()
+    continuar = str(input("Desea jugar de nuevo? [Y/N]"))
+    if continuar == "Y":
+        continue
+    else:
+        print('Gracias por jugar')
+        break
+
 
 
 
