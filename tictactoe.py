@@ -162,6 +162,7 @@ class ComputerPlayer(TicTacToe):
 
 # starting the game
 while True:
+    #Sugiero mostrar una unica vez donde es cada posicion por numero
     tic_tac_toe = TicTacToe()
     tic_tac_toe.start()
     continuar = str(input("Desea jugar de nuevo? [Y/N]"))
