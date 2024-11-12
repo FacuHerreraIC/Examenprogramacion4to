@@ -4,6 +4,15 @@ import os
 
 #X is max = 1
 #O in min = -1
+#funciones para printear la tabla sin los datos
+def print_board(board):
+    for row in board:
+        print(" | ".join(str(cell) for cell in row))
+
+def generartablita():
+    #Crea la tabla de 9x9
+    board = [[(i * 3 + j + 1) for j in range(3)] for i in range(3)]
+    return board
 
 class TicTacToe:
     def __init__(self):
@@ -161,11 +170,16 @@ class ComputerPlayer(TicTacToe):
         return square
 
 # starting the game
+# Genera la tablita
+tablita = generartablita()
+# Printea la tablita
+print_board(tablita)
 while True:
     tic_tac_toe = TicTacToe()
     tic_tac_toe.start()
     continuar = str(input("Desea jugar de nuevo? [Y/N]"))
     if continuar == "Y":
+        print_board(tablita)
         continue
     else:
         print('Gracias por jugar')
